@@ -9,61 +9,24 @@ body {
 
 @font-face {
     font-family: Redaction-Regular;
-    src: url(assets/Redaction-Regular.otf);
+    src: url("/assets/Redaction-Regular.otf");
 }
 
 @font-face {
     font-family: IBM-Plex-Regular;
-    src: url(assets/IBMPlexMono-Regular.ttf);
+    src: url("/assets/IBMPlexMono-Regular.ttf");
 }
 
 @font-face {
     font-family: IBM-Plex-Light;
-    src: url(assets/IBMPlexMono-Light.ttf);
-}
-
-.archive-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    gap: 25px;
-    grid-row-gap: 120px;
-    padding: 0px 30px;
-}
-
-.archive-grid-2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    padding: 50px 15px;
-    width: 75%;
-}
-
-.archive-grid-2 img {
-    width: 100%;
-}
-
-.archive-grid img {
-    width: 70%;
-}
-
-.archive-grid a {
-    text-decoration: none;
-    color: black
-}
-
-.archive-grid h4 {
-    font-family: 'IBM-Plex-Light';
-    font-size: 16px;
-    margin: 0;
-    color: whitesmoke;
+    src: url("/assets/IBMPlexMono-Light.ttf");
 }
 
 .archive-header {
     font-family: 'IBM-Plex-Regular';
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
     align-items: flex-end;
     color: black;
     padding: 15px 25px;
@@ -78,12 +41,12 @@ body {
 .archive-header h1 {
     margin: 0px;
     padding: 0px;
-    font-size: 32px;
+    font-size: 30px;
     text-decoration: none;
 }
 
 .archive-header a {
-    font-size: 32px;
+    font-size: 30px;
     text-decoration: none;
     color: black;
     margin-left: 35px;
@@ -94,6 +57,83 @@ body {
     color: whitesmoke;
     background-size: 200% 50%;
     padding: .10em .30em;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+    grid-row-gap: 120px;
+    padding: 80px 60px;
+}
+
+.archive-grid-2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding: 10px 15px;
+    width: 93%;
+    position: relative;
+}
+
+.archive-grid-2 img {
+    width: 100%;
+}
+.archive-grid-2 p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Redaction-Regular';
+    font-size: 62px;
+    text-align: center;
+    line-height: 85px;
+    width: 100%;
+}
+
+.archive-grid-3 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: start;
+    gap: 25px;
+    grid-row-gap: 120px;
+    padding: 80px 60px;
+    height: 100vh;
+    font-family: 'IBM-Plex-Regular';
+}
+.archive-grid-3 h4 {
+    margin-top: 0;
+}
+
+div.scroll-container {
+    background-color: black;
+    overflow: scroll;
+    white-space: nowrap;
+    padding: 80px;
+    height: 100%;
+}
+  
+div.scroll-container img {
+    height: 100%;
+    padding: 25px;
+}
+
+.archive-grid img {
+    width: 75%;
+}
+
+.archive-grid a {
+    text-decoration: none;
+    color: black
+}
+
+.archive-grid h4 {
+    font-family: 'IBM-Plex-Light';
+    font-size: 16px;
+    margin: 0;
+    color: whitesmoke;
 }
 
 /* https://codepen.io/ValentinBossens/pen/BaKRwea */
@@ -117,7 +157,7 @@ body {
     z-index: 9999;
     position: fixed;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png');
-    opacity: 0.15;
+    opacity: 0.20;
     pointer-events: none;
     -webkit-animation: noise 1s steps(2) infinite;
     animation: noise 1s steps(2) infinite;
