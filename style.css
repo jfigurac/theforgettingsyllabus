@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Redaction-Regular;
+    src: url(assets/Redaction-Regular.otf);
+}
+
+@font-face {
+    font-family: IBM-Plex-Regular;
+    src: url(assets/IBMPlexMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: IBM-Plex-Light;
+    src: url(assets/IBMPlexMono-Light.ttf);
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+    grid-row-gap: 120px;
+    padding: 0px 30px;
+}
+
+.archive-grid-2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding: 50px 15px;
+    width: 75%;
+}
+
+.archive-grid-2 img {
+    width: 100%;
+}
+
+.archive-grid img {
+    width: 70%;
+}
+
+.archive-grid a {
+    text-decoration: none;
+    color: black
+}
+
+.archive-grid h4 {
+    font-family: 'IBM-Plex-Light';
+    font-size: 16px;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.archive-header {
+    font-family: 'IBM-Plex-Regular';
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: black;
+    padding: 15px 25px;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 97%
+        /* Full width */
+}
+
+.archive-header h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.archive-header a {
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+    margin-left: 35px;
+}
+
+.highlight {
+    background: black;
+    color: whitesmoke;
+    background-size: 200% 50%;
+    padding: .10em .30em;
+}
+
+/* https://codepen.io/ValentinBossens/pen/BaKRwea */
+.grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 300;
+    transform: translateZ(0);
+}
+
+.grain::before {
+    content: "";
+    top: -10rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    z-index: 9999;
+    position: fixed;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png');
+    opacity: 0.15;
+    pointer-events: none;
+    -webkit-animation: noise 1s steps(2) infinite;
+    animation: noise 1s steps(2) infinite;
+}
+
+@-webkit-keyframes noise {
+    to {
+        transform: translate3d(-7rem, 0, 0)
+    }
+}
+
+@keyframes noise {
+    0% {
+        transform: translate3d(0, 9rem, 0)
+    }
+
+    10% {
+        transform: translate3d(-1rem, -4rem, 0)
+    }
+
+    20% {
+        transform: translate3d(-8rem, 2rem, 0)
+    }
+
+    30% {
+        transform: translate3d(9rem, -9rem, 0)
+    }
+
+    40% {
+        transform: translate3d(-2rem, 7rem, 0)
+    }
+
+    50% {
+        transform: translate3d(-9rem, -4rem, 0)
+    }
+
+    60% {
+        transform: translate3d(2rem, 6rem, 0)
+    }
+
+    70% {
+        transform: translate3d(7rem, -8rem, 0)
+    }
+
+    80% {
+        transform: translate3d(-9rem, 1rem, 0)
+    }
+
+    90% {
+        transform: translate3d(6rem, -5rem, 0)
+    }
+
+    to {
+        transform: translate3d(-7rem, 0, 0)
+    }
+}
